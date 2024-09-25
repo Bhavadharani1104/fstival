@@ -1,0 +1,50 @@
+
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensures the container takes full viewport height */
+  background-color: #1f2833;
+  text-align: center;
+  margin: 0;
+}
+
+.heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.para {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.btn-flashcards {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  color: #000;
+  background-color: #28f0ceba;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.btn-flashcards:hover {
+  background-color: #218838;
+}
+
+/* Highlight active navbar link (like a button) */
+.navbar .nav-link.active {
+  background-color: #28f0ceba;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: #000 !important;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}

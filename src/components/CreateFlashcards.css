@@ -1,0 +1,126 @@
+/* General page styling */
+body {
+    background-color: #1f2833; /* Dark page background */
+    color: white; /* Default text color */
+    overflow: hidden;
+}
+
+/* Container for the flashcards */
+.container {
+    max-width: 100%;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh; /* Full viewport height for scroll */
+}
+
+/* Add new flashcard button styling */
+.btn-success {
+    background-color: #fff; /* Button color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    color: #000;
+    border-radius: 5px;
+}
+
+.btn-success:hover {
+    background-color: #28f0ceba;
+    color: white;
+}
+
+/* Flashcard container styling */
+.flashcard {
+    background-color: #3f4e5a; /* Darker flashcard background */
+    color: white; /* Ensure text is visible */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hover effect on flashcards */
+.flashcard:hover {
+    background-color: #28a745;
+}
+
+/* Expanded flashcard styling */
+.flashcard.expanded {
+    background-color: #28f0ceba; /* Lighter green when expanded */
+    transform: scale(1.05); /* Slight scale up */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Card title and text styling */
+.card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; /* Ensure title doesn't overflow */
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #ccc; /* Slightly lighter text for non-essential details */
+}
+
+/* Input and textarea for editing */
+.form-control {
+    background-color: #3f4e5a;
+    border: none;
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #ccc; /* Placeholder color */
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #a71d2a;
+}
+
+/* Scrollable container when flashcards exceed page size */
+.row {
+    max-height: calc(100vh - 150px); /* Ensure space for the header */
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+/* Add responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 100%; /* Flashcards take full width on small screens */
+        max-width: 100%;
+    }
+
+    .flashcard {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .col-md-3 {
+        flex: 0 0 25%; /* Show 4 flashcards per row on larger screens */
+        max-width: 25%;
+    }
+}
