@@ -79,14 +79,11 @@ const Python = () => {
                 <div className="card-body">
                   <h5 className="card-title">{card.title}</h5>
                   <p className="card-content">{card.content}</p>
-                  {/* Conditionally render the syntax only if the card is selected */}
                   {selectedCard === index && (
                     <div className="syntax-container">
                       <pre>{card.syntax}</pre>
                     </div>
                   )}
-
-                  {/* Close button for the expanded card */}
                   {selectedCard === index && (
                     <button
                       className="close-btn"
