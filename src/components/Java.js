@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Java.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Java = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -78,10 +79,10 @@ const Java = () => {
   return (
     <div className="java-wrapper">
       <h2 className="java-heading">Java Flashcards</h2>
-      <div className="java-container">
+      <div className="java-container container">
         <div className="row">
           {cards.map((card, index) => (
-            <div className="col-6 col-md-3 mb-4" key={index}>
+            <div className="col-sm-6 col-md-4 mb-4" key={index}>
               <div
                 className={`card ${selectedCard === index ? 'selected' : ''}`}
                 onClick={() => handleCardClick(index)}

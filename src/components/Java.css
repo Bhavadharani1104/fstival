@@ -1,94 +1,75 @@
-/* Full page background */
+/* Main container styling */
 .java-wrapper {
-  min-height: 100vh;
   background-color: #1f2833;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 20px;
+  padding: 2rem;
 }
 
-/* Heading at the top with slight gap */
 .java-heading {
-  color: #fff;
-  margin-bottom: 30px;
-  font-size: 2.5rem;
   text-align: center;
-  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 2.5rem;
 }
 
-.java-container {
-  width: 100%;
-}
-
-/* Card initial small size */
+/* Card styling */
 .card {
-  width: 100%; /* Set to 100% for responsiveness */
-  padding: 10px;
-  background-color: #28f0ceba !important; /* Default color with !important */
   cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background-color 0.4s ease-in-out;
-  position: relative;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.selected {
+  height: 350px; /* Expanded height for selected cards */
+  transition: all 0.5s ease; /* Smooth expand effect */
 }
 
 .card-body {
   position: relative;
-  z-index: 1;
-}
-
-/* Hover effect - increase size and change color */
-.card:hover {
-  transform: scale(1.1);
-  background-color: #28a745 !important; /* Color on hover with !important */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-
-/* Expanded size when selected */
-.card.selected {
-  height: 400px; /* Height on expand */
-  background-color: #28a745 !important; /* Color when selected with !important */
-  z-index: 2;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-  transition: all 0.6s ease-in-out;
-}
-
-/* Close button styling */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.close-btn:hover {
-  color: #ff4d4d;
-  transform: scale(1.2);
-}
-
-/* Card content */
-.card-content {
-  margin-top: 10px;
-  color: #000;
-  font-weight: bold;
-  display: none; /* Hide content initially */
-}
-
-/* Show content when selected */
-.card.selected .card-content {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .card-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Syntax container styling for selected cards */
+.syntax-container {
+  margin-top: 1rem;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 120px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+/* Close button for expanded cards */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance hover effect */
 }
